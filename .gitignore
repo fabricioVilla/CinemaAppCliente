@@ -1,0 +1,15 @@
+# Ignorar archivos y carpetas específicas
+/node_modules
+/dist
+*.log
+*.tmp
+*.swp
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar configuraciones específicas del editor
+.vscode/
+.idea/
+.vs/
