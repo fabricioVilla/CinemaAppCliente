@@ -13,6 +13,7 @@
             <Style TargetType="Button" x:Key="icono_boton">
                 <Setter Property="HeightRequest" Value="32"></Setter>
                 <Setter Property="WidthRequest" Value="32"></Setter>
+                <Setter Property="Padding" Value="0"></Setter>
             </Style>
 
             <Style TargetType="Image" x:Key="icono_imagen">
@@ -21,10 +22,21 @@
             </Style>
             <Style TargetType="FlexLayout" x:Key="buscador">
                 <Setter Property="Background" Value="White"></Setter>
+                <Setter Property="Padding" Value="0"></Setter>
             </Style>
             <Style TargetType="Image" x:Key="lupa">
                 <Setter Property="WidthRequest" Value="20"></Setter>
                 <Setter Property="HeightRequest" Value="20"></Setter>
+                <Setter Property="Margin" Value="0,9,0,0"></Setter>
+            </Style>
+            <Style TargetType="Entry" x:Name="buscador_entry">
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="FontSize" Value="13"></Setter>
+            </Style>
+
+            <Style TargetType="Image" Class="imagenes_class" ApplyToDerivedTypes="True">
+                <Setter Property="WidthRequest" Value="22"></Setter>
+                <Setter Property="HeightRequest" Value="22"></Setter>
             </Style>
 
         </ResourceDictionary>
@@ -55,16 +67,16 @@
                 </Grid.ColumnDefinitions>
 
                 
-            <Button ImageSource="menu_hamburguesa.png" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" Style="{StaticResource icono_boton}"></Button>
+            <Button ImageSource="menu_hamburguesa.png" Grid.Row="0" Grid.Column="0" Style="{StaticResource icono_boton}"></Button>
 
 
             <ContentView  Grid.Row="0" Grid.Column="1"  Style="{StaticResource buscador}">
                 <ContentView.Clip>
                     <RoundRectangleGeometry Rect="0,0,245,40" CornerRadius="20"/>
                 </ContentView.Clip>
-                <FlexLayout JustifyContent="Start">
+                <FlexLayout JustifyContent="Center" AlignContent="Center">
                     <Image Source="busqueda1.png" Style="{StaticResource lupa}"></Image>
-                    <Entry Placeholder="Pelicula" WidthRequest="150"></Entry>
+                    <Entry Placeholder="Pelicula" Style="{StaticResource buscador_entry}" ></Entry>
                 </FlexLayout>
             </ContentView>
             
@@ -72,18 +84,72 @@
             <Image Grid.Row="0" Grid.Column="2" Source="circulo_l.png" Style="{StaticResource icono_imagen}" ></Image>
 
 
+            <FlexLayout  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
 
+                <Image Source="ubicacion_de_la_capa_terrestre.png" StyleClass="imagenes_class"></Image>
+                <Entry  Placeholder="Ingresa tu codigo postal" Keyboard="Numeric"   ></Entry>
+
+                   
+            </FlexLayout> 
+            
+           
+                
         </Grid>
 
-           
-        <StackLayout Grid.Row="1" Background="Green">
-
-            <Label Text="wewes"></Label>
-
-        </StackLayout>
 
 
 
+
+
+
+
+        <ScrollView  Grid.Row="1">
+            <StackLayout Padding="10">
+                <!--Contenido dentro del ScrollView-->
+                <Label Text="Este es un ejemplo de un ScrollView en .NET MAUI."
+                   FontSize="20"
+                   HorizontalOptions="Center" />
+                <Label Text="El contenido puede ser cualquier cosa: texto, imágenes, etc."
+                   FontSize="16"
+                   HorizontalOptions="Center" />
+                <Label Text="Desplázate para ver más contenido."
+                   FontSize="16"
+                   HorizontalOptions="Center" />
+                <!--Añade más contenido para hacer el ScrollView funcional-->
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
+
+                <!--Más contenido...-->
+            </StackLayout>
+        </ScrollView>
 
     </Grid>
 
@@ -92,53 +158,6 @@
 
 
 
-        <!--<ScrollView>
-        <StackLayout Padding="10">
-            --><!-- Contenido dentro del ScrollView --><!--
-            <Label Text="Este es un ejemplo de un ScrollView en .NET MAUI."
-                   FontSize="20"
-                   HorizontalOptions="Center" />
-            <Label Text="El contenido puede ser cualquier cosa: texto, imágenes, etc."
-                   FontSize="16"
-                   HorizontalOptions="Center" />
-            <Label Text="Desplázate para ver más contenido."
-                   FontSize="16"
-                   HorizontalOptions="Center" />
-            --><!-- Añade más contenido para hacer el ScrollView funcional --><!--
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia..." />
-
-            --><!-- Más contenido... --><!--
-        </StackLayout>
-    </ScrollView>-->
 
 
 </ContentPage>
